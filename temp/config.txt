@@ -1,0 +1,17 @@
+in-window_notes_color:#0effcb
+in-window_notes_font_size:24
+in-window_notes_font_family:Noto Sans
+
+in-window_line_color:#ffffff
+in-window_line_font_size:24
+in-window_line_font_family:Noto Sans
+
+in-browser_notes_color:#5126be
+in-browser_notes_font_size:7
+in-browser_notes_font_family:Noto Sans
+
+in-browser_line_color:#000000
+in-browser_line_font_size:20
+in-browser_line_font_family:Noto Sans
+
+

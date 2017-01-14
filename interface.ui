@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>731</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>The Street Singer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>731</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>729</width>
+       <height>599</height>
+      </rect>
+     </property>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>461</width>
+        <height>571</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>0</y>
+        <width>221</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Properties</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Load from text file</string>
+       </property>
+       <widget class="QPushButton" name="browseFromFile">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>88</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Browse...</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Load from image</string>
+       </property>
+       <widget class="QPushButton" name="browseFromImage">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>88</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Browse...</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>180</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Convert into:</string>
+       </property>
+       <widget class="QComboBox" name="notationComboBox">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>121</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Italian notation</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>English notation</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>250</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Convert into:</string>
+       </property>
+       <widget class="QComboBox" name="SharpFlatComboBox">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>121</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Sharp</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Flat</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>350</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Tone conversion</string>
+       </property>
+       <widget class="QComboBox" name="toneComboBox">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>69</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>do</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>do#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>re</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>re#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mi</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mi#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>fa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>fa#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>sol</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>sol#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>la</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>la#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>si</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>440</y>
+         <width>201</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Convert and save</string>
+       </property>
+       <widget class="QPushButton" name="convert">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>88</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CONVERT</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="saveIntoFile">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>101</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>SAVE INTO FILE</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>731</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionPreferences"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
