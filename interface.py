@@ -323,10 +323,10 @@ class UiMainWindow(object):
         print("######## START CONVERSION ########")
 
         convertedtext = []
-        for f in mylist:
-            if self.converter.is_note_line(f.lower()):
+        for f in mylist: #ciclo su tutto il testo
+            if self.converter.is_note_line(f.lower()): #se la linea contiene note
                 line = f.lower()
-                if firstline:
+                if firstline: #se è la prima linea
                     lasttone = self.converter.get_first_note(line.split(" "))  # trovo la prima nota
                     note1 = self.converter.convert_f_to_s(lasttone)
                     convertednote = self.converter.convert_english_to_italian(note1)
@@ -341,16 +341,18 @@ class UiMainWindow(object):
                     print("Tone difference: " + str(tonedifference))
                     firstline = False
 
-                list_line = self.converter.get_note_list(line)
+                list_line = self.converter.get_note_list(line) #converto la linea in una lista di note,catatteri e spazi
+
+
                 newlist = []
-                for i in list_line:
+                for i in list_line: #converto tutto in notazione italiana e in diesis
                     newlist.append(self.converter.convert_english_to_italian(self.converter.convert_f_to_s(i)))
 
                 convertednotelist = []
 
                 for l in newlist:
                     if l == " ":
-                        convertednotelist.append("  ")
+                        convertednotelist.append(" ")
                     if newtone != "null":
                         try:
                             convertednote = self.converter.convert(l.lower(), tonedifference)
@@ -374,7 +376,9 @@ class UiMainWindow(object):
                 if unicode(self.sharpFlatComboBox.currentText()) == "Flat":
                     convertednotelist = self.converter.convert_list_into_flat(convertednotelist)
 
-                newline = "".join(convertednotelist)  # rendo la lista una volta convertita nuovamente una stringa
+
+                newline = self.converter.pack(convertednotelist) # rendo la lista una volta convertita nuovamente una stringa
+                #newline = "".join(convertednotelist)  # rendo la lista una volta convertita nuovamente una stringa
 
                 # aggiungi al testo convertito la linea modificata
                 color = self.preferences.getDataFromName("in-window_notes_color")

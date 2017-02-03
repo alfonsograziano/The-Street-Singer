@@ -22,11 +22,22 @@ class MusicConverter:
         notelist = note_string.split(" ")
         newlist = []
         for f in notelist:
-            if "/" in f:
-                newlist.append(f.split("/")[0])
-                newlist.append("/")
-                newlist.append(f.split("/")[1])
-            else:
+            try:
+                if "/" in f:
+                    newlist.append(f.split("/")[0])
+                    newlist.append("/")
+                    newlist.append(f.split("/")[1])
+                elif "(" in f:
+                    newlist.append(f.split("(")[0])
+                    newlist.append("(")
+                    newlist.append(f.split("(")[1])
+                elif ")" in f:
+                    newlist.append(f.split(")")[0])
+                    newlist.append(")")
+                    newlist.append(f.split(")")[1])
+                else:
+                    newlist.append(f)
+            except:
                 newlist.append(f)
 
         return newlist
@@ -385,7 +396,6 @@ class MusicConverter:
         return [mynote, bonus]
 
     def is_italian(self, note):
-        #this funcion does work whitout any bug (i hope)
         if note in self.italianNote or note in self.italianNoteF:
             return True
         else:
@@ -423,3 +433,33 @@ class MusicConverter:
             return True
         return False
 
+    def pack(self, list_line):
+        line = ""
+        count = 0
+        while count < len(list_line):
+            if list_line[count] == "/" and list_line[count -1] == " " and list_line[count +1] == " ":
+                try:
+                    line = line[:-1]
+                    line += "/"
+                    count +=1
+                except:
+                    pass
+
+            elif list_line[count] == "(" and list_line[count -1] == " " and list_line[count +1] == " ":
+                try:
+                    line = line[:-1]
+                    line += "("
+                    count +=1
+                except:
+                    pass
+            elif list_line[count] == ")" and list_line[count - 1] == " " and list_line[count + 1] == " ":
+                try:
+                    line = line[:-1]
+                    line += ")"
+                    count += 1
+                except:
+                    pass
+            else:
+                line += list_line[count]
+            count += 1
+        return line
