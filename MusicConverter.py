@@ -243,8 +243,8 @@ class MusicConverter:
                 currentindex = self.italianNote.index(note)
                 final_index = self.italianNote.index(finalnote)
 
-                print("current note index: " + str(currentindex))
-                print("final note index: " + str(final_index))
+                #print("current note index: " + str(currentindex))
+                #print("final note index: " + str(final_index))
 
                 while currentindex != final_index:
                     if currentindex == 11:
@@ -463,3 +463,11 @@ class MusicConverter:
                 line += list_line[count]
             count += 1
         return line
+
+    def get_notes_in_string(self,string):
+        notes = self.get_note_list(string)
+        notes_list = []
+        for f in notes:
+            if f != "/" and f != "(" and f != ")" and f != "" and f != " " :
+                notes_list.append(f)
+        return notes_list
