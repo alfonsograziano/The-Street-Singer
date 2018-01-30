@@ -1,12 +1,14 @@
 .note{
-size: 7px;
-color: #5126be;
+size: 9px;
+color: #2a4979;
 text-transform: uppercase;
-margin: -4px;
+padding:0px;
  }
-
-.text{
+ .text{
 size: 20px;
 color: #000000;
-margin: -4px;
+color: #000000;
+padding:0px;
+margin-top:-15px;
+margin-bottom:-5px;
 }

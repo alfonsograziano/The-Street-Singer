@@ -1,4 +1,4 @@
-in-window_notes_color:#0effcb
+in-window_notes_color:#1c97f5
 in-window_notes_font_size:24
 in-window_notes_font_family:Noto Sans
 
@@ -6,8 +6,8 @@ in-window_line_color:#ffffff
 in-window_line_font_size:24
 in-window_line_font_family:Noto Sans
 
-in-browser_notes_color:#5126be
-in-browser_notes_font_size:7
+in-browser_notes_color:#2a4979
+in-browser_notes_font_size:9
 in-browser_notes_font_family:Noto Sans
 
 in-browser_line_color:#000000
